@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h4{
+  font-family:monospace;
+  font-size: 20px;
+}
+h2{
+  font-family :monospace;
+  font-size: 36px;
+}
+h1{
+  font-family: monospace;
+  font-size: 76px;
+}
+
+p{
+  font-family: monospace;
+  font-size: 15px;
+}
+
+/* NAVBAR */
+#header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background: #001f3d;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+#navbar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo{
+  width: 150px;
+  height: 100px;
+}
+#navbar li{
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+
+#navbar li a {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+
+#navbar li a:hover,
+#navbar li a.active{
+  color: #FFD700;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #FFD700;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+
+/* HOME PAGE */
+#hero{
+  background-image: url("images/lamine.jpg");
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: top 25% right 0;
+  background-repeat: no-repeat;
+  padding: 0 80px;
+  color: #ffffff;
+  line-height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#hero h4{
+  padding-bottom: 15px;
+} 
+
+#hero h1 span{
+  font-weight: 700;
+  letter-spacing: 2px;
+  color:#FFD700
+}
