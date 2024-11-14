@@ -1,0 +1,75 @@
+/* Reset some default styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: monospace;
+}
+
+
+/* Banner Section */
+.shop-banner {
+  position: relative;
+  width: 100%;
+  height: 600px; 
+  background-image: url('images/forcabarca.jpg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 10px; 
+}
+
+.banner-text {
+  font-size: 3rem; 
+  font-family: monospace;
+  color: #FFD700;
+  font-weight: bold;
+}
+
+/* Responsive Styles */
+
+/* Medium screens (tablets, smaller laptops) */
+@media (max-width: 1024px) {
+  .shop-banner {
+      height: 400px; 
+  }
+  .banner-text {
+      font-size: 2.5rem; 
+  }
+}
+
+/* Small screens (mobile devices) */
+@media (max-width: 768px) {
+  .shop-banner {
+      height: 300px; 
+  }
+  .banner-text {
+      font-size: 2rem; 
+  }
+}
+
+/* Extra small screens (small mobile devices) */
+@media (max-width: 480px) {
+  .shop-banner {
+      height: 300px; 
+  }
+  .banner-text {
+      font-size: 1.5rem; 
+  }
+}
