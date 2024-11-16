@@ -8,7 +8,7 @@
 </head>
 <body>
   
-  <!-- Navbar Section -->
+ 
 <!-- Navbar -->
 <nav class="navbar">
   <div class="navbar-logo">
@@ -17,7 +17,7 @@
   <button class="menu-toggle" id="menu-toggle">☰</button>
   <ul class="navbar-links" id="navbar-links">
     <li><a class="active" href="index.html">Home</a></li>
-    <li><a href="#">Shop</a></li>
+    <li><a href="shop.html">Shop</a></li>
     <li><a href="#">Contact</a></li>
     <li><a href="#" id="cart-button">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
@@ -29,28 +29,30 @@
 </nav>
 
     <!-- Cart Slider -->
-    <div class="cart-slider" id="cart-slider">
+    <!-- Cart Sidebar -->
+    <section id="cart-slider">
       <button class="close-btn" id="close-cart">&times;</button>
       <h2>Your Cart</h2>
       <ul class="cart-items">
-        <li>Item 1 - $10</li>
-        <li>Item 2 - $20</li>
+        <!-- Items will be dynamically added here -->
       </ul>
       <div class="cart-footer">
-        <span>Total: $30</span>
-        <button class="checkout-btn">Checkout</button>
+        <span>Total: $0.00</span>
+        <button id="checkout" disabled>Checkout</button>
+        <button id="clear-cart">Clear Cart</button>
       </div>
-    </div>
+    </section>
 
-  <!-- HERO SECTION -->
 
-  <section id="hero">
-    <h4>The Best Collections</h4>
-    <h2>Super Value deals</h2>
-    <h1>We are <span>CULERS!!</span></h1>
-    <p>Save more with coupons & up to 70% off!</p>
-    <button>Shop Now</button>
-  </section>
+    <!-- HERO SECTION -->
+
+    <section id="hero">
+      <h4>The Best Collections</h4>
+      <h2>Super Value deals</h2>
+      <h1>We are <span>CULERS!!</span></h1>
+      <p>Save more with coupons & up to 70% off!</p>
+      <button>Shop Now</button>
+    </section>
 
   <div class="team-section">
     <h2>We Are Barcelona</h2>

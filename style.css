@@ -48,7 +48,6 @@ p{
 
 .navbar-links li {
   padding: 0 25px;
-  position: relative;
 }
 
 .navbar-links a {
@@ -63,19 +62,6 @@ p{
 .navbar-links li a.active {
   color: #FFD700;
 }
-
-
-.navbar-links li a.active::after,
-.navbar-links li a:hover::after{
-  content: "";
-  width: 30%;
-  height: 2px;
-  background-color: #FFD700;
-  position: absolute;
-  bottom: -4px;
-  left: 20px;
-}
-
 
 
 /* Cart Icon */
@@ -96,76 +82,99 @@ p{
 }
 
 
-/* Responsive Navbar */
-.menu-toggle {
-  display: none;
-  font-size: 2rem;
-  background: none;
-  border: none;
+
+/* Cart Sidebar */
+#cart-slider {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100vh;
+  background: #001f3d;
   color: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  transform: translateX(100%);
+  transition: transform 0.5s ease;
+  z-index: 1000;
+  padding: 20px;
+}
+
+#cart-slider.open {
+  transform: translateX(0);
+}
+
+#cart-slider h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #FFD700;
+}
+
+.cart-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow-y: auto;
+  max-height: 70%;
+}
+
+.cart-items li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+}
+
+.cart-items img {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.cart-items .item-info {
+  flex-grow: 1;
+}
+
+.cart-items .item-info h4 {
+  font-size: 1rem;
+  margin: 0 0 5px;
+}
+
+.cart-items .item-info p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.cart-footer {
+  position: absolute;
+  bottom: 20px;
+  width: calc(100% - 40px);
+  text-align: center;
+}
+
+.cart-footer span {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #FFD700;
+  margin-bottom: 10px;
+  display: block;
+}
+
+#clear-cart {
+  background: #A50044;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .navbar-logo a img {
-    width: 80px;
-    height: 50px;
-  }
-
-  .navbar-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background-color: #001f3d;
-    width: 100%;
-  }
-
-  .navbar-links.active {
-    display: flex;
-  }
-
-  .navbar-links li {
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-  }
+#clear-cart:hover {
+  background: #800033;
 }
 
-.navbar-links li a.active::after,
-.navbar-links li a:hover::after{
-  content: "";
-  width: 5%;
-  height: 2px;
-  background-color: #FFD700;
-  position: absolute;
-  bottom: -1px;
-  left: 45%;
-}
-
-/* Cart Slider Styles */
-.cart-slider {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 300px;
-  height: 100%;
-  background-color: #001f3d;
-  color: white;
-  padding: 20px;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-  transition: right 0.3s ease-in-out;
-  z-index: 1000;
-}
-
-.cart-slider.open {
-  right: 0;
-}
 
 .close-btn {
   background: none;
@@ -178,36 +187,26 @@ p{
   cursor: pointer;
 }
 
-.cart-items {
-  list-style: none;
-  margin: 20px 0;
-  padding: 0;
-}
-
-.cart-items li {
-  padding: 10px 0;
-  border-bottom: 1px solid #444;
-}
-
-.cart-footer {
-  margin-top: 20px;
-}
-
-.cart-footer span {
-  display: block;
-  margin-bottom: 10px;
-  font-size: 1.1rem;
-}
-
-.checkout-btn {
-  padding: 10px 15px;
-  color: white;
-  background-color: #004D98;
+#checkout {
+  background: #FFD700;
+  color: black;
   border: none;
-  cursor: pointer;
-  font-size: 1rem;
-  width: 100%;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: not-allowed;
+  opacity: 0.5;
+  margin-top: 10px;
 }
+
+#checkout.enabled {
+  cursor: pointer;
+  opacity: 1;
+}
+
+#checkout:hover.enabled {
+  background: #FFC300;
+}
+
 
 /* HOME PAGE */
 #hero{
@@ -342,3 +341,48 @@ p{
 }
 
 
+
+/* Responsive Navbar */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.menu-toggle:hover{
+  color: #FFD700;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar-logo a img {
+    width: 80px;
+    height: 50px;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #001f3d;
+    width: 100%;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-links li {
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+  }
+}

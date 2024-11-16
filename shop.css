@@ -14,7 +14,7 @@ body {
 .shop-banner {
   position: relative;
   width: 100%;
-  height: 600px; 
+  height: 700px; 
   background-image: url('images/forcabarca.jpg'); 
   background-size: cover;
   background-repeat: no-repeat;
@@ -41,6 +41,73 @@ body {
   color: #FFD700;
   font-weight: bold;
 }
+
+/* Shop Section */
+#shop {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #A50044
+}
+
+.section-title {
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 70px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.product-card {
+  background: white;
+  border: 3px solid #003366;
+  border-radius: 8px;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
+}
+
+.product-card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.product-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.add-to-cart-btn {
+  margin-top: 10px;
+  padding: 10px 15px;
+  color: white;
+  background-color: #004D98;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #003366;
+}
+
+
+
+
+
 
 /* Responsive Styles */
 
@@ -71,5 +138,12 @@ body {
   }
   .banner-text {
       font-size: 1.5rem; 
+  }
+}
+
+/* Product cards */
+@media (min-width: 1200px) {
+  .product-container {
+    grid-template-columns: repeat(5, 1fr); /* Maximum of 4 cards per row */
   }
 }
