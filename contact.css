@@ -1,0 +1,174 @@
+/* Banner Section */
+.shop-banner {
+  position: relative;
+  width: 100%;
+  height: 700px; 
+  background-image: url('images/687132.jpg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 10px; 
+}
+
+.banner-text {
+  font-size: 3rem; 
+  font-family: monospace;
+  color: #FFD700;
+  font-weight: bold;
+}
+
+.contact-section {
+  padding: 40px;
+  background-color: #FFD700;
+  color: #0056b3;
+}
+
+.contact-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-details {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.contact-details div {
+  text-align: center;
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+}
+
+.map-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.map {
+  margin: 20px 0;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.map iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 8px;
+}
+
+#contact-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-form h3{
+  padding-bottom: 20px;
+}
+
+#contact-form input,
+#contact-form select,
+#contact-form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+#contact-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#contact-form button:hover {
+  background-color: #0056b3;
+}
+
+.social-links {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social-links a {
+  margin: 0 10px;
+}
+
+.social-links img {
+  width: 30px;
+  height: 30px;
+}
+
+.directions-btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.directions-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+  .contact-details {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+  }
+
+  .map-form {
+    flex-direction: column; /* Stack the map and form */
+  }
+}
+
+/* Small screens (mobile phones) */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 20px; /* Reduce padding for smaller screens */
+  }
+
+  #contact-form input,
+  #contact-form select,
+  #contact-form textarea {
+    font-size: 14px; /* Adjust font size */
+    padding: 8px; /* Reduce padding */
+  }
+
+  .social-links img {
+    width: 25px; /* Smaller icons */
+    height: 25px;
+  }
+
+  .map iframe {
+    height: 250px; /* Adjust map height */
+  }
+}
+

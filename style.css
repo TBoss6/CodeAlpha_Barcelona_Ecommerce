@@ -209,7 +209,7 @@ p{
 
 
 /* HOME PAGE */
-#hero{
+#hero {
   background-image: url("images/lamine.jpg");
   height: 100vh;
   width: 100%;
@@ -225,14 +225,27 @@ p{
   justify-content: center;
 }
 
-#hero h4{
+#hero h4 {
   padding-bottom: 15px;
-} 
+  font-size: 1.2rem; /* Responsive text size */
+}
 
-#hero h1 span{
+#hero h2 {
+  font-size: 2.5rem; /* Responsive text size */
+}
+
+#hero h1 {
+  font-size: 3rem; /* Adjust font size */
+}
+
+#hero h1 span {
   font-weight: 700;
   letter-spacing: 2px;
-  color:#FFD700
+  color: #FFD700;
+}
+
+#hero p {
+  font-size: 1.1rem; /* Adjust font size for better readability */
 }
 
 #hero button {
@@ -241,22 +254,23 @@ p{
   color: #ffffff;
   background: #FFD700;
   border: none;
-  border-radius: 50px; 
+  border-radius: 50px;
   font-weight: bold;
   z-index: 1;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
 
-#hero button:hover{
+#hero button:hover {
   background: #001f3d;
   color: #FFD700;
 }
 
-#hero button:active{
+#hero button:active {
   transform: translateY(-4px);
   background: linear-gradient(45deg, #004D98, #A50044);
 }
+
 
 /* Team Section */
 .team-section {
@@ -317,7 +331,224 @@ p{
   color: #FFD700;
 }
 
+
+/* Footer */
+
+/* Footer Styling */
+.footer {
+  background-color: #001f3d;
+  color: #fff;
+  padding: 40px 20px;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  gap: 20px;
+}
+
+.footer-brand {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer-logo {
+  max-width: 100px; 
+}
+ 
+
+.footer-brand img {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  flex: 1;
+  min-width: 150px;
+}
+
+.footer-links h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-social {
+  flex: 1;
+  min-width: 150px;
+}
+
+.footer-social h4{
+  padding-bottom: 10px;
+}
+
+.social-icons a svg {
+  width: 24px;
+  margin: 0 5px;
+}
+
+.footer-newsletter {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-newsletter h4 {
+  padding-bottom: 10px;
+}
+
+.footer-newsletter form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-newsletter input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+}
+
+.footer-newsletter button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.footer-newsletter button:hover {
+  background-color: #0056b3;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+}
+
+
+
 /* Responsive Styles */
+
+
+/* Hero */
+
+@media (max-width: 1024px) {
+  #hero {
+    padding: 0 40px;
+    text-align: center;
+    align-items: center; 
+    
+  }
+
+  #hero h4,
+  #hero h2,
+  #hero h1,
+  #hero p {
+    line-height: 2; 
+  }
+
+  #hero h2 {
+    font-size: 2rem; 
+  }
+
+  #hero h1 {
+    font-size: 2.5rem; 
+  }
+
+  #hero p {
+    font-size: 1rem;
+  }
+
+  #hero button {
+    font-size: 14px; 
+    padding: 12px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero {
+    height: 500px; 
+    padding: 20px; 
+  }
+
+  #hero h4 {
+    font-size: 1rem;
+  }
+
+  #hero h2 {
+    font-size: 1.8rem;
+  }
+
+  #hero h1 {
+    font-size: 2rem;
+  }
+
+  #hero p {
+    font-size: 0.9rem;
+  }
+
+  #hero button {
+    font-size: 12px;
+    padding: 10px 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  #hero {
+    padding: 10px; /* Minimal padding for very small screens */
+  }
+
+  #hero h4 {
+    font-size: 0.9rem;
+  }
+
+  #hero h2 {
+    font-size: 1.5rem;
+  }
+
+  #hero h1 {
+    font-size: 1.8rem;
+  }
+
+  #hero p {
+    font-size: 0.8rem;
+  }
+
+  #hero button {
+    font-size: 10px;
+    padding: 8px 12px;
+  }
+}
+
 @media (max-width: 768px) {
   .players-container {
       flex-direction: column;
@@ -384,5 +615,18 @@ p{
     text-align: center;
     padding: 10px 0;
     position: relative;
+  }
+}
+
+/* Footer */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }  
+
+  .footer-newsletter form {
+    flex-direction: column;
+    width: 100%;
   }
 }

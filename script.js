@@ -1,3 +1,5 @@
+import CheckoutButton from 'CheckoutButton.js';
+
 // Navbar Toggle for Mobile
 const menuToggle = document.getElementById("menu-toggle");
 const navbarLinks = document.getElementById("navbar-links");
@@ -122,3 +124,9 @@ checkoutButton.addEventListener("click", () => {
 
 // Load cart from Local Storage on page load
 loadCartFromLocalStorage();
+
+
+// Shop button on home 
+document.getElementById("go-to-shop").addEventListener("click", () => {
+  window.location.href = "shop.html";
+});
